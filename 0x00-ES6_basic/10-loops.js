@@ -1,8 +1,11 @@
-export default function appendToEachArrayValue(array, appendString) {
-	const newArray = [];
-	for (const value of array) {
-	newArray.push(appendString + value);
-	}
+// 10-loops.js
 
-	return newArray;
+export default function appendToEachArrayValue(array, appendString) {
+  const newArray = [];
+  // eslint-disable-next-line no-restricted-syntax
+  for (const value of array) {
+    newArray.push(appendString + value);
   }
+
+  return newArray;
+}
