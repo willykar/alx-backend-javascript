@@ -1,9 +1,5 @@
-/**
- * Calculates the number of arguments passed to the function
- *
- * @param {array} args - The arguments passed to the function(variable number)
- * @return {number} The number of arguments passed
- */
+// 4-rest-parameter.js
+
 export default function returnHowManyArguments(...args) {
-	return args.length;
-  }
+  return args.length;
+}
