@@ -1,4 +1,4 @@
-/ getFullBudgetobject function
+// getFullBudgetobject function
 
 import getBudgetObject from './7-getBudgetObject';
 
