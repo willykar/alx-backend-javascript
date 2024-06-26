@@ -4,7 +4,7 @@ export default async function asyncUploadUser(){
 	try {
 		const [photo, user] = await Promise.all([
 			uploadPhoto(),
-			createUser()
+			createUser(),
 		]);
 		return {
 			photo: photo,
