@@ -6,7 +6,6 @@ export default async function asyncUploadUser() {
       uploadPhoto(),
       createUser(),
     ]);
-
     return {
       photo: photo,
       user: user,
