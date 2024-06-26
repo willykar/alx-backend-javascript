@@ -5,8 +5,8 @@ export default handleProfileSignup(firstName, lastName, fileName){
 	const [user, photo] = await Promise.all([
 		signUpUser(firstName, lastName),
 		uploadPhoto(fileName)]);
-	return [{ status: 'fulfilled', value: userResult },
-		{ status: 'fulfilled', value: photoResult }];
+	return [{ status: 'fulfilled', value: user },
+		{ status: 'fulfilled', value: photo}];
 	catch (error) {
 		return [
 			{status: 'rejected', value: error }]
