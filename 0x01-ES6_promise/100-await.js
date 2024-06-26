@@ -4,17 +4,17 @@ export default async function asyncUploadUser() {
   try {
     const [photo, user] = await Promise.all([
       uploadPhoto(),
-      createUser()
+      createUser(),
     ]);
 
     return {
       photo: photo,
-      user: user
+      user: user,
     };
   } catch (err) {
     return {
       photo: null,
-      user: null
+      user: null,
     };
   }
 }
