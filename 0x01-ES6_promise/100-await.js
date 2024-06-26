@@ -8,11 +8,12 @@ export default async function asyncUploadUser(){
 		]);
 		return {
 			photo: photo,
-			user: user,};
-	}
-	catch {
+			user: user,
+		};
+	} catch (err) {
 		return {
 			photo: null,
-			user: null,};
+			user: null,
+		};
 	}
 }
