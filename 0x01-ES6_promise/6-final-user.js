@@ -1,7 +1,7 @@
 import signUpUser from './4-user-promise.js';
 import uploadPhoto from './5-photo-reject.js';
 
-async function handleProfileSignup(firstName, lastName, fileName) {
+export default async function handleProfileSignup(firstName, lastName, fileName) {
   try {
     const [user, photo] = await Promise.all([
       signUpUser(firstName, lastName),
@@ -18,5 +18,3 @@ async function handleProfileSignup(firstName, lastName, fileName) {
     ];
   }
 }
-
-export default handleProfileSignup;
