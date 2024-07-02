@@ -1,5 +1,3 @@
-import getListStudents from './0-get_list_students.js'
-
-export defualt function getStudentIdsSum(students) {
-	return students.reduce((sum, student) => sum + student.id, 0);
+export default function getStudentIdsSum(students) {
+  return students.reduce((sum, student) => sum + student.id, 0);
 }
