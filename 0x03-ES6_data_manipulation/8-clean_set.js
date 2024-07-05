@@ -1,4 +1,4 @@
-iexport default function cleanSet(set, startString) {
+export default function cleanSet(set, startString) {
   const string = [];
 
   if (
