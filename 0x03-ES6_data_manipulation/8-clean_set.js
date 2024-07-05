@@ -1,12 +1,18 @@
-export default function cleanSet(set, startString) {
-  let result = '';
-  set.forEach(value => {
-    if (value.startsWith(startString)) {
-      result += value.substring(startString.length) + '-';
-    }
-  });
-  if (result.endsWith('-')) {
-    result = result.slice(0, -1);
+iexport default function cleanSet(set, startString) {
+  const string = [];
+
+  if (
+    typeof set !== 'object'
+    || typeof startString !== 'string'
+    || startString.length === 0
+  ) {
+    return '';
   }
-  return result;
+
+  for (const item of set) {
+    if (item && item.startsWith(startString)) {
+      string.push(item.slice(startString.length));
+    }
+  }
+  return string.join('-');
 }
