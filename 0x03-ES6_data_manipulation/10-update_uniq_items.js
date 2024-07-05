@@ -1,11 +1,11 @@
-export default function groceriesList() {
-  const groceries = new Map();
+export default function updateUniqueItems(map) {
+  if (!(map instanceof Map)) {
+    throw Error('Cannot process');
+  }
 
-  groceries.set('Apples', 10);
-  groceries.set('Tomatoes', 10);
-  groceries.set('Pasta', 1);
-  groceries.set('Rice', 1);
-  groceries.set('Banana', 5);
+  for (const [key] of map) {
+    if (map.get(key) === 1) map.set(key, 100);
+  }
 
-  return groceries;
+  return map;
 }
