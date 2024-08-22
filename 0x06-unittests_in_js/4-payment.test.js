@@ -3,7 +3,7 @@ const { expect } = require('chai');
 const Utils = require('./utils.js');
 const sendPaymentRequestToApi = require('./4-payment.js');
 
-describe('sendPaymentRequestToApi', () => {
+describe('sendPaymentRequestToApi', function() {
   it('should call Utils.calculateNumber with type SUM and return 10', () => {
     const calculateNumberStub = sinon.stub(Utils, 'calculateNumber').returns(10);
     const consoleSpy = sinon.spy(console, 'log');
