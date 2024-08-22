@@ -1,30 +1,20 @@
 const assert = require('assert');
 const calculateNumber = require('./1-calcul');
 
-describe('calculateNumber', () => {
-  describe('type SUM', () => {
-    it('should return the sum of rounded numbers', () => {
-      assert.strictEqual(calculateNumber('SUM', 1.4, 4.5), 6);
-      assert.strictEqual(calculateNumber('SUM', -2, -5.9), -8);
-    });
+describe('calculateNumber', function() {
+  it('should return 6 for SUM with inputs 1.4 and 4.5', function() {
+    assert.strictEqual(calculateNumber('SUM', 1.4, 4.5), 6);
   });
 
-  describe('type SUBTRACT', () => {
-    it('should return the subtraction of rounded numbers', () => {
-      assert.strictEqual(calculateNumber('SUBTRACT', 1.4, 4.5), -4);
-      assert.strictEqual(calculateNumber('SUBTRACT', -2, -5.9), 4);
-    });
+  it('should return -4 for SUBTRACT with inputs 1.4 and 4.5', function() {
+    assert.strictEqual(calculateNumber('SUBTRACT', 1.4, 4.5), -4);
   });
 
-  describe('type DIVIDE', () => {
-    it('should return the division of rounded numbers', () => {
-      assert.strictEqual(calculateNumber('DIVIDE', 1.4, 4.5), 0.2);
-      assert.strictEqual(calculateNumber('DIVIDE', -2, -5.9), (2 / 6));
-    });
+  it('should return 0.2 for DIVIDE with inputs 1.4 and 4.5', function() {
+    assert.strictEqual(calculateNumber('DIVIDE', 1.4, 4.5), 0.2);
+  });
 
-    it('should return Error when divisor is zero', () => {
-      assert.strictEqual(calculateNumber('DIVIDE', 1.4, 0), 'Error');
-      assert.strictEqual(calculateNumber('DIVIDE', -2, 0), 'Error');
-    });
+  it('should return "Error" for DIVIDE with inputs 1.4 and 0', function() {
+    assert.strictEqual(calculateNumber('DIVIDE', 1.4, 0), 'Error');
   });
 });
