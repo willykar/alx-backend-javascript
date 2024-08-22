@@ -35,15 +35,18 @@
 ## Installation
 
 1. Clone the repository:
+   
    ```bash
    git clone https://github.com/yourusername/nodejs-testing-project.git
    cd nodejs-testing-project
 
-2. Install dependencies:
+3. Install dependencies:
+   
    ```bash
    npm install
 
-3. Running Tests:
+5. Running Tests:
+   
    To run all the tests, use the following command:
    ```bash
    npm test
